@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Image,
   KeyboardAvoidingView,
+  Linking,
   StatusBar,
   StyleSheet,
   Text,
@@ -9,8 +10,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import AppText from '../../components/appText/AppText';
+import Button from '../../components/button/Button';
 
-const LogIn = () => {
+const LogIn = ({ navigation }) => {
+  const handleNav = () => {
+    navigation.navigate('recoverypassword');
+  };
   return (
     <>
       <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
@@ -26,7 +32,7 @@ const LogIn = () => {
             <View style={styles.imageView}>
               <Image
                 style={styles.imageStyle}
-                source={require('./src/assets/images/app-icon.png')}
+                source={require('./../assets/images/app-icon.png')}
               />
               <Text style={styles.titleStyle}>EMTeam</Text>
             </View>
@@ -66,32 +72,25 @@ const LogIn = () => {
             alignItems: 'center',
           }}
         >
-          <Text
+          <AppText
             style={{
               color: 'black',
-
               paddingBottom: 20,
               fontWeight: 'bold',
               fontSize: 20,
-              marginTop: 40,
               alignSelf: 'flex-start',
             }}
           >
-            Login to your account
-          </Text>
-          <Text
+            Create an account
+          </AppText>
+          <AppText
             style={{
-              fontSize: 14,
-              textAlign: 'left',
               alignSelf: 'flex-start',
-              marginBottom: 15,
-              paddingLeft: 10,
-              color: 'black',
-              fontWeight: 'bold',
             }}
           >
             Email
-          </Text>
+          </AppText>
+
           <TextInput
             style={{
               height: 40,
@@ -117,7 +116,6 @@ const LogIn = () => {
           >
             Password
           </Text>
-
           <TextInput
             style={{
               height: 40,
@@ -130,7 +128,6 @@ const LogIn = () => {
             secureTextEntry={true}
             placeholder="Enter your password"
           />
-
           <Text
             style={{
               color: 'black',
@@ -141,29 +138,8 @@ const LogIn = () => {
           >
             Forgot password?
           </Text>
-          <TouchableOpacity
-            activeOpacity={0.7}
-            style={{
-              marginTop: 30,
-              backgroundColor: '#2E62FF',
-              paddingVertical: 10,
-              paddingHorizontal: 30,
-              borderRadius: 10,
-            }}
-          >
-            <Text
-              style={{
-                color: 'white',
-                fontSize: 14,
-                width: 290,
-                height: 23,
+          <Button onPress={handleNav} title={'Continue with email'} />
 
-                textAlign: 'center',
-              }}
-            >
-              Continue with email
-            </Text>
-          </TouchableOpacity>
           <View style={styles.container}>
             <View style={styles.line}></View>
             <Text style={styles.textOr}>OR</Text>
@@ -188,7 +164,7 @@ const LogIn = () => {
           >
             <Image
               style={styles.imageStyle1}
-              source={require('./src/assets/images/Google.png')}
+              source={require('./../assets/images/Google.png')}
             />
 
             <Text
@@ -205,7 +181,6 @@ const LogIn = () => {
               Continue with Google
             </Text>
           </TouchableOpacity>
-
           <TouchableOpacity
             activeOpacity={0.7}
             style={{
@@ -225,7 +200,7 @@ const LogIn = () => {
           >
             <Image
               style={styles.imageStyle1}
-              source={require('./src/assets/images/Apple.png')}
+              source={require('./../assets/images/Apple.png')}
             />
             <Text
               style={{
@@ -241,6 +216,17 @@ const LogIn = () => {
               Continue with Apple
             </Text>
           </TouchableOpacity>
+          <View style={styles.lineApple}>
+            <View style={styles.lineApple1}></View>
+          </View>
+          <Text style={styles.underApple}>By signing up you agree to the</Text>
+          <Text
+            style={styles.linkText}
+            onPress={() => Linking.openURL(' Terms of Services ')}
+          >
+            Terms of Services and Privacy Policy
+          </Text>
+
           <Text style={styles.lastText}>© 2024 Solver Healthcare LLC.</Text>
           <Text style={styles.lastText1}>
             All rights reserved. Patent Pending.
@@ -275,7 +261,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   lastText: {
-    marginTop: 80,
+    marginTop: 40,
     color: 'black',
   },
   lastText1: {
@@ -293,6 +279,18 @@ const styles = StyleSheet.create({
     gap: 10,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  lineApple: {
+    flexDirection: 'row',
+    marginTop: 30,
+  },
+  lineApple1: {
+    borderWidth: 1,
+    borderRightWidth: 350,
+    borderColor: '#000B3618',
+  },
+  underApple: {
+    marginTop: 10,
   },
 });
 

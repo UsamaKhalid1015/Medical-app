@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   Image,
@@ -11,6 +12,14 @@ import {
 } from 'react-native';
 
 const SignUp = () => {
+  const navigation = useNavigation();
+
+  const handleNav = () => {
+    navigation.navigate('login');
+  };
+
+  navigation.goBack();
+
   return (
     <>
       <KeyboardAvoidingView behavior="padding" style={{ flex: 1 }}>
@@ -26,7 +35,7 @@ const SignUp = () => {
             <View style={styles.imageView}>
               <Image
                 style={styles.imageStyle}
-                source={require('./src/assets/images/app-icon.png')}
+                source={require('./../../assets/images/app-icon.png')}
               />
               <Text style={styles.titleStyle}>EMTeam</Text>
             </View>
@@ -142,6 +151,7 @@ const SignUp = () => {
             Forgot password?
           </Text>
           <TouchableOpacity
+            onPress={handleNav}
             activeOpacity={0.7}
             style={{
               marginTop: 30,
@@ -188,7 +198,7 @@ const SignUp = () => {
           >
             <Image
               style={styles.imageStyle1}
-              source={require('./src/assets/images/Google.png')}
+              source={require('./../../assets/images/Google.png')}
             />
 
             <Text
@@ -225,7 +235,7 @@ const SignUp = () => {
           >
             <Image
               style={styles.imageStyle1}
-              source={require('./src/assets/images/Apple.png')}
+              source={require('./../../assets/images/Apple.png')}
             />
             <Text
               style={{
