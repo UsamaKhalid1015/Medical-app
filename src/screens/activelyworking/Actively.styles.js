@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
   arrow: {
     width: 18,
     height: 16,
+    marginBottom: 20,
   },
   emtText: {
     marginTop: 50,
@@ -48,5 +49,9 @@ export const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     marginLeft: 10,
     fontSize: 18,
+  },
+  selectedOption: {
+    borderColor: '#007bff',
+    backgroundColor: '#e6f0ff',
   },
 });
