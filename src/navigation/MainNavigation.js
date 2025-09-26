@@ -7,6 +7,9 @@ import RecoveryPassword from '../screens/recoverypassword/RecoveryPassword';
 import Verification from '../screens/verification/Verification';
 import CreatePassword from '../screens/createnewpassword/CreatePassword';
 import ActivelyWorking from '../screens/activelyworking/ActivelyWorking';
+import RolePractice from '../screens/rolepractice/RolePractice';
+import CurrentlyWorking from '../screens/currentlyworking/CurrentlyWorking';
+import StateCountry from '../screens/statecountry/StateCountry';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +26,9 @@ const MainNavigation = () => {
         <Stack.Screen name="verification" component={Verification} />
         <Stack.Screen name="createnewpassword" component={CreatePassword} />
         <Stack.Screen name="activelyworking" component={ActivelyWorking} />
+        <Stack.Screen name="rolepractice" component={RolePractice} />
+        <Stack.Screen name="currentlyworking" component={CurrentlyWorking} />
+        <Stack.Screen name="statecountry" component={StateCountry} />
       </Stack.Navigator>
     </NavigationContainer>
   );
