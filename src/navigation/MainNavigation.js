@@ -10,6 +10,8 @@ import ActivelyWorking from '../screens/activelyworking/ActivelyWorking';
 import RolePractice from '../screens/rolepractice/RolePractice';
 import CurrentlyWorking from '../screens/currentlyworking/CurrentlyWorking';
 import StateCountry from '../screens/statecountry/StateCountry';
+import YourCertification from '../screens/yourcertification.js/YourCertification';
+import HomePage from '../screens/homescreen/HomePage';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +31,8 @@ const MainNavigation = () => {
         <Stack.Screen name="rolepractice" component={RolePractice} />
         <Stack.Screen name="currentlyworking" component={CurrentlyWorking} />
         <Stack.Screen name="statecountry" component={StateCountry} />
+        <Stack.Screen name="yourcertification" component={YourCertification} />
+        <Stack.Screen name="homepage" component={HomePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

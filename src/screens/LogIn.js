@@ -127,7 +127,12 @@ const LogIn = ({ navigation }) => {
             }}
             secureTextEntry={true}
             placeholder="Enter your password"
-          />
+          >
+            <Image
+              style={styles.eyeImage}
+              source={require('./../assets/images/eye-open.png')}
+            />
+          </TextInput>
           <Text
             style={{
               color: 'black',
@@ -291,6 +296,10 @@ const styles = StyleSheet.create({
   },
   underApple: {
     marginTop: 10,
+  },
+  eyeImage: {
+    width: 32,
+    height: 32,
   },
 });
 

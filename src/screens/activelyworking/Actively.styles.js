@@ -30,8 +30,8 @@ export const styles = StyleSheet.create({
   },
   amNotText: {
     alignSelf: 'flex-start',
-    marginLeft: 10,
     fontSize: 18,
+    paddingTop: 14,
   },
   notActively1: {
     borderWidth: 1,
@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
   },
   bottomButton: {
     position: 'absolute',
-    bottom: 20, // distance from bottom
+    bottom: 20,
     left: 20,
     right: 20,
   },

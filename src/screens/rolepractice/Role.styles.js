@@ -32,7 +32,8 @@ export const styles = StyleSheet.create({
 
   amNotText: {
     alignSelf: 'flex-start',
-    marginLeft: 10,
+    // marginLeft: 10,
+    paddingTop: 14,
   },
   container: {
     flex: 1,

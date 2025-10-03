@@ -20,9 +20,9 @@ const CreatePassword = ({ navigation }) => {
       <View>
         <AppText style={styles.newPasswrod}>Create a new Password</AppText>
         <Text style={styles.passwrodText}>Password</Text>
-        <TextInput style={styles.inputPassword} />
+        <TextInput style={styles.inputPassword} secureTextEntry={true} />
         <Text style={styles.repeateText}>Repeate password</Text>
-        <TextInput style={styles.inputRepeate} />
+        <TextInput style={styles.inputRepeate} secureTextEntry={true} />
         <Button onPress={handleNav} title={'Update password'} />
       </View>
       <View style={styles.line3}>
