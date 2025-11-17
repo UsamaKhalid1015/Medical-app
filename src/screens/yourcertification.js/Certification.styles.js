@@ -76,6 +76,37 @@ export const styles = StyleSheet.create({
   },
   skipNow: {
     color: 'black',
-    // alignSelf: 'flex-end',
+  },
+  image: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  inputImage: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: 1,
+    borderWidth: 0.5,
+    height: 132,
+    width: 361,
+    marginTop: 10,
+    borderStyle: 'dashed',
+    borderColor: '#00063332',
+    backgroundColor: '#00005506',
+    borderRadius: 8,
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  clickUploading: {
+    textAlign: 'center',
+    flexDirection: 'row',
+    marginTop: 20,
+  },
+  uploadImage: {
+    height: 30,
+    width: 30,
+  },
+  imagefont: {
+    marginTop: 10,
   },
 });

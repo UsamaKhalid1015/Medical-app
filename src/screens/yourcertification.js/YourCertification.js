@@ -28,7 +28,7 @@ const certificate = [
 
 const YourCertification = () => {
   const handleNav = () => {
-    navigation.navigate('homepage');
+    navigation.navigate('Tabs');
   };
 
   const navigation = useNavigation();
@@ -70,6 +70,20 @@ const YourCertification = () => {
           <Text style={styles.licenseText}>Enter License #</Text>
           <TextInput style={styles.license} placeholder="License number" />
           <Text style={styles.licenseText}>Add Image(optional)</Text>
+        </View>
+      </View>
+      <View style={styles.image}>
+        <View style={styles.inputImage}>
+          <Image
+            style={styles.uploadImage}
+            source={require('../../assets/images/uploadeimage.png')}
+          />
+          <TouchableOpacity activeOpacity={0.7}>
+            <AppText style={styles.clickUploading}>Click to upload</AppText>
+          </TouchableOpacity>
+          <Text style={styles.imagefont}>
+            SVG, PNG, JPG or GIF (MAX. 800x400px)
+          </Text>
         </View>
       </View>
       <Button

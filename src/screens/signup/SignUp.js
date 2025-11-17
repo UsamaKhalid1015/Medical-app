@@ -18,7 +18,7 @@ const SignUp = () => {
     navigation.navigate('login');
   };
 
-  navigation.goBack();
+  // navigation.goBack();
 
   return (
     <>
