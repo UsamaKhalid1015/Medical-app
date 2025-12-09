@@ -13,7 +13,9 @@ import RolePractice from '../screens/rolepractice/RolePractice';
 import CurrentlyWorking from '../screens/currentlyworking/CurrentlyWorking';
 import StateCountry from '../screens/statecountry/StateCountry';
 import YourCertification from '../screens/yourcertification.js/YourCertification';
-
+import Cardiac from '../screens/cardiac/Cardiac';
+import HomePage from '../screens/homescreen/HomePage';
+import PossibleCause from '../screens/possiblecauses/PossibleCauses';
 // Bottom Tabs
 import BottomTabs from './Tabs';
 
@@ -37,7 +39,9 @@ const MainNavigation = () => {
         <Stack.Screen name="currentlyworking" component={CurrentlyWorking} />
         <Stack.Screen name="statecountry" component={StateCountry} />
         <Stack.Screen name="yourcertification" component={YourCertification} />
-
+        <Stack.Screen name="Cardiac" component={Cardiac} />
+        <Stack.Screen name="Home" component={HomePage} />
+        <Stack.Screen name="possiblecauses" component={PossibleCause} />
         {/* Screens WITH bottom tabs */}
         <Stack.Screen name="Tabs" component={BottomTabs} />
       </Stack.Navigator>
