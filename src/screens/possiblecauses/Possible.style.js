@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   mainViewarrow: {
-    paddingHorizontal: 10,
-    marginTop: 100,
+    paddingHorizontal: 20,
+    marginTop: '20%',
   },
   threecomponent: {
     flexDirection: 'row',
@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
   notActively: {
     border: 1,
     borderColor: '#000B3618',
-    width: 361,
+    width: '100%',
     height: 56,
     marginTop: 10,
     borderRadius: 10,
@@ -55,14 +55,10 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    marginLeft: 10,
-    marginRight: 10,
   },
   bottomButton: {
     position: 'absolute',
     bottom: 20,
-    left: 20,
-    right: 20,
   },
   pageStyle: {
     width: 16,
@@ -73,12 +69,12 @@ export const styles = StyleSheet.create({
     borderRadius: 12,
     flexDirection: 'row',
     padding: 16,
-    marginLeft: 10,
     alignItems: 'center',
     justifyContent: 'space-between',
     position: 'absolute',
     bottom: 20,
-    width: '95%',
+    left: 20,
+    right: 20,
   },
   pageimage: {
     flexDirection: 'row',

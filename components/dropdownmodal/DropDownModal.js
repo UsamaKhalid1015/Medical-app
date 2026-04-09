@@ -10,7 +10,15 @@ import { useState } from 'react';
 import { styles } from './Dropdown.styles';
 import AppText from '../appText/AppText';
 
-const DropDownModal = ({ title, onPress, placeholder, data }) => {
+const DropDownModal = ({
+  title,
+  onPress,
+  placeholder,
+  data,
+  placeholderColor = '#999',
+  selectedTextColor = '#000',
+  style,
+}) => {
   const [isCountryModelVisible, setCountryModelVisible] = useState(false);
 
   const [selectedCountry, setSelectedCountry] = useState();
@@ -21,15 +29,20 @@ const DropDownModal = ({ title, onPress, placeholder, data }) => {
   };
 
   return (
-    <View>
+    <View style={[styles.container, style]}>
       <AppText style={styles.stylecountry}>{title}</AppText>
-      {/* country model */}
       <TouchableOpacity
         activeOpacity={0.7}
         style={styles.styleModel}
         onPress={() => setCountryModelVisible(true)}
       >
-        <Text>{selectedCountry?.name || placeholder}</Text>
+        <Text
+          style={{
+            color: selectedCountry ? selectedTextColor : placeholderColor,
+          }}
+        >
+          {selectedCountry?.name || placeholder}
+        </Text>
         <Image
           style={styles.dropDownImage}
           source={require('./../../src/assets/images/chevron-down.png')}

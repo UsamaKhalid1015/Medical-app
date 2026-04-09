@@ -2,11 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   mainView: {
-    paddingHorizontal: 10,
-    marginTop: 100,
+    marginTop: '20%',
+    paddingHorizontal: 20,
+    flex: 1,
   },
   imageView3: {
-    width: 32,
+    width: '10%',
     height: 32,
     objectFit: 'contain',
   },
@@ -16,7 +17,7 @@ export const styles = StyleSheet.create({
     gap: 7,
   },
   verifyCode: {
-    marginTop: 50,
+    marginTop: 30,
     fontSize: 20,
   },
   enterText: {
@@ -29,7 +30,7 @@ export const styles = StyleSheet.create({
   inputValue: {
     textAlign: 'center',
     borderWidth: 1,
-    width: 60,
+    width: '17%',
     marginTop: 10,
     borderRadius: 10,
     borderColor: '#E0E1E6',
@@ -43,13 +44,17 @@ export const styles = StyleSheet.create({
   },
   belowLine1: {
     borderWidth: 1,
-    borderRightWidth: 150,
-    border: 1,
     borderColor: '#000B3618',
+    width: '43%',
   },
   backText1: {
     paddingTop: 60,
     textAlign: 'center',
     fontSize: 16,
+  },
+  btnContinue: {
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

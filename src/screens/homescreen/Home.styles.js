@@ -3,17 +3,17 @@ import { StyleSheet, Dimensions } from 'react-native';
 export const styles = StyleSheet.create({
   topView: {
     flex: 1,
-    marginLeft: 20,
-    marginRight: 20,
+    paddingHorizontal: 20,
   },
   logoimage: {
     height: 32,
     width: 32,
   },
   mainView: {
-    marginTop: 60,
+    marginTop: '20%',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor: 'white',
   },
   mainView1: {
     flexDirection: 'row',
@@ -21,11 +21,11 @@ export const styles = StyleSheet.create({
     gap: 7,
   },
   Badgestyle: {
-    width: 62,
+    width: '20%',
     height: 32,
   },
   starstyle: {
-    width: 28,
+    width: '20%',
     height: 26,
   },
   ptsstyle: {
@@ -133,15 +133,6 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
   },
-  container: {
-    width: 40,
-    height: 40,
-  },
-
-  image: {
-    width: 40,
-    height: 40,
-  },
   bottomImage: {
     position: 'absolute',
     right: 10,
@@ -150,10 +141,11 @@ export const styles = StyleSheet.create({
   topImage: {
     bottom: 5,
   },
+
   belowflatlist: {
     flexDirection: 'row',
     backgroundColor: '#dee6f4ff',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: 20,
@@ -207,5 +199,7 @@ export const styles = StyleSheet.create({
   },
   mainScreen: {
     padding: 20,
+    backgroundColor: 'white',
+    // flex: 1,
   },
 });

@@ -29,7 +29,7 @@ const ActivelyWorking = ({ navigation }) => {
             source={require('../../assets/images/Vector.png')}
           />
         </TouchableOpacity>
-        <ProgressBar progress={'30%'} />
+        <ProgressBar progress={'30%'} style={styles.progressBar} />
       </View>
 
       <AppText style={styles.emtText}>
@@ -78,6 +78,7 @@ const ActivelyWorking = ({ navigation }) => {
           style={styles.bottomButton}
           onPress={handleNav}
           title={'Continue'}
+          textColor="white"
         />
       ) : null}
     </View>

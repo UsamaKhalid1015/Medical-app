@@ -1,4 +1,3 @@
-// import { useNavigation } from '@react-navigation/native';
 import React from 'react-native';
 import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
 import AppText from '../../../components/appText/AppText';
@@ -11,7 +10,7 @@ const RecoveryPassword = ({ navigation }) => {
   };
 
   return (
-    <View>
+    <View style={styles.mainContainer}>
       <View style={styles.topView}>
         <Image
           style={styles.imagestyle}
@@ -29,7 +28,12 @@ const RecoveryPassword = ({ navigation }) => {
           style={styles.inputEmail}
           placeholder="example@gmail.com"
         ></TextInput>
-        <Button onPress={handleNav} title={'Recovery Password'} />
+        <Button
+          onPress={handleNav}
+          title={'Recovery Password'}
+          textColor="white"
+          style={styles.recoveryButton}
+        />
       </View>
       <View style={styles.line1}>
         <View style={styles.belowLine}></View>
@@ -40,9 +44,5 @@ const RecoveryPassword = ({ navigation }) => {
     </View>
   );
 };
-const style = StyleSheet.create({
-  recoveryStyle: {
-    fontSize: 30,
-  },
-});
+
 export default RecoveryPassword;

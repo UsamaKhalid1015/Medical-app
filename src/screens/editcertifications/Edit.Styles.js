@@ -1,21 +1,23 @@
 import { StyleSheet } from 'react-native';
-
 export const styles = StyleSheet.create({
+  mainContainer: {
+    marginTop: '20%',
+    paddingHorizontal: 20,
+    flex: 1,
+  },
+  headingContainer: {
+    flexDirection: 'row',
+  },
   arrow: {
-    width: 18,
-    height: 16,
-    marginBottom: 20,
+    width: 15,
+    height: 15,
   },
-  mainViewarrow: {
-    paddingHorizontal: 10,
-    marginTop: 100,
+  titleText: {
+    marginLeft: 90,
+    fontWeight: 600,
   },
-  certificationText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  formStyle: {
-    marginTop: 40,
+  modelContainer: {
+    marginTop: 30,
   },
   certificateText: {
     color: 'black',
@@ -30,12 +32,12 @@ export const styles = StyleSheet.create({
   },
   dateMonth: {
     flexDirection: 'row',
-    gap: 20,
+    gap: 10,
   },
   monthStyle: {
     border: 1,
     borderColor: '#000B3618',
-    width: 170,
+    flex: 2,
     height: 40,
     marginTop: 10,
     borderRadius: 10,
@@ -47,7 +49,7 @@ export const styles = StyleSheet.create({
   license: {
     border: 1,
     borderColor: '#000B3618',
-    width: 361,
+    width: '100%',
     height: 56,
     marginTop: 10,
     borderRadius: 10,
@@ -61,52 +63,38 @@ export const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
-  container: {
-    flex: 1,
-  },
-  bottomButton: {
-    position: 'absolute',
-    bottom: 20,
-    left: 20,
-    right: 20,
-  },
-  arrowSkip: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  skipNow: {
-    color: 'black',
-  },
-  image: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  inputImage: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: 1,
-    borderWidth: 0.5,
-    height: 132,
-    width: 361,
-    marginTop: 10,
-    borderStyle: 'dashed',
-    borderColor: '#00063332',
-    backgroundColor: '#00005506',
-    borderRadius: 8,
-    textAlign: 'center',
-    marginTop: 20,
-  },
-  clickUploading: {
-    textAlign: 'center',
+  imageContainer: {
     flexDirection: 'row',
     marginTop: 20,
   },
-  uploadImage: {
-    height: 30,
-    width: 30,
-  },
-  imagefont: {
+  imageStyle: {
+    width: '40%',
+    height: 150,
     marginTop: 10,
+  },
+  subContainer: {
+    flexDirection: 'row',
+    gap: 15,
+    alignItems: 'center',
+  },
+  textRemove: {
+    backgroundColor: '#00104010',
+    paddingHorizontal: 8,
+    paddingVertical: 8,
+    borderRadius: 10,
+  },
+  btnStyle: {
+    backgroundColor: '#FF010110',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  btnStyle1: {
+    position: 'static',
+    marginTop: 60,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    bottom: 15,
   },
 });

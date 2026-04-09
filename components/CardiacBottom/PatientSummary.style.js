@@ -3,11 +3,12 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingHorizontal: 20,
+    marginTop: '6%',
   },
   chipscontainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    padding: 20,
   },
   chip: {
     backgroundColor: '#00104010',
@@ -24,7 +25,6 @@ export const styles = StyleSheet.create({
     lineHeight: 20,
   },
   historyText: {
-    marginLeft: 20,
     fontSize: 16,
     color: '#1E1F24',
     fontWeight: 400,
@@ -34,11 +34,9 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     marginTop: 20,
     marginBottom: 4,
-    marginLeft: 20,
     color: '#1E1F24',
   },
   sectionText: {
-    marginLeft: 20,
     color: '#1E1F24',
     fontWeight: 400,
     marginRight: 30,
@@ -46,8 +44,7 @@ export const styles = StyleSheet.create({
   vitalscontainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 20,
-    marginRight: 30,
+    marginTop: '10%',
   },
   vital: {
     fontSize: 16,
@@ -57,8 +54,7 @@ export const styles = StyleSheet.create({
     fontWeight: 10,
     position: 'relative',
     bottom: 30,
-    marginLeft: 10,
-    marginRight: 10,
     marginTop: 60,
+    width: '100%',
   },
 });

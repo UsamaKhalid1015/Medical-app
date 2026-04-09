@@ -2,22 +2,24 @@ import { View, Image, TouchableOpacity, Text } from 'react-native';
 import ProgressBar from '../../../components/progressBar/ProgressBar';
 import { styles } from './Possible.style';
 import AppText from '../../../components/appText/AppText';
-import Button from './../../../components/button/Button';
 import { useState } from 'react';
+import { useRef } from 'react';
+import BottomSheetBack from '../../../components/bottomSheetBack/BottomSheetBack';
+import BottomViewCard from '../../../components/bottomSheetViewCard/BottomViewCard';
+import { useNavigation } from '@react-navigation/native';
 
-const PossibleCause = ({ navigation }) => {
+const PossibleCause = () => {
+  const refBackSheet = useRef();
+  const refBottomView = useRef();
+  const navigation = useNavigation();
   const [selectedOption, setSelectedOption] = useState(null);
 
   const options = [
-    { id: '1', value: 'Ischemic stroke' },
-    { id: '2', value: 'Myocardial Infarction' },
-    { id: '3', value: 'Heat exhaustion' },
-    { id: '4', value: 'Heat stroke' },
+    { id: '1', value: 'Ischemic stroke', isCorrect: false },
+    { id: '2', value: 'Myocardial Infarction', isCorrect: true },
+    { id: '3', value: 'Heat exhaustion', isCorrect: false },
+    { id: '4', value: 'Heat stroke', isCorrect: false },
   ];
-
-  const handleNav = () => {
-    navigation.navigate('');
-  };
 
   return (
     <View style={styles.container}>
@@ -25,9 +27,8 @@ const PossibleCause = ({ navigation }) => {
         <View style={styles.threecomponent}>
           <TouchableOpacity
             activeOpacity={0.7}
-            onPress={() => {
-              navigation.goBack();
-            }}
+            onPress={() => refBackSheet.current.open()}
+            style={{ padding: 10 }}
           >
             <Image
               style={styles.arrow}
@@ -44,7 +45,7 @@ const PossibleCause = ({ navigation }) => {
           </View>
         </View>
 
-        <ProgressBar progress={'30%'} />
+        <ProgressBar progress={'20%'} />
 
         <AppText style={styles.emtText}>What are the possible causes? </AppText>
 
@@ -53,12 +54,18 @@ const PossibleCause = ({ navigation }) => {
             <TouchableOpacity
               key={item.id}
               activeOpacity={0.7}
-              onPress={() => setSelectedOption(item.id)}
+              onPress={() => {
+                setSelectedOption(item);
+
+                if (item.isCorrect) {
+                  navigation.navigate('correctscreen');
+                } else {
+                  navigation.navigate('wrongscreen');
+                }
+              }}
               style={[
                 styles.notActively,
                 {
-                  // ❌ Remove blue highlight, always white
-                  //   backgroundColor: 'white',
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                   alignItems: 'center',
@@ -70,7 +77,6 @@ const PossibleCause = ({ navigation }) => {
                 style={[
                   styles.amNotText,
                   {
-                    // ❌ Keep text always black
                     color: 'black',
                   },
                 ]}
@@ -89,12 +95,17 @@ const PossibleCause = ({ navigation }) => {
           />
           <AppText>Patient report card</AppText>
         </View>
-        <TouchableOpacity activeOpacity={0.7}>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => refBottomView.current.open()}
+        >
           <View style={styles.cardStyle}>
             <Text style={styles.textView}>View card</Text>
           </View>
         </TouchableOpacity>
       </View>
+      <BottomSheetBack ref={refBackSheet} />
+      <BottomViewCard ref={refBottomView} />
     </View>
   );
 };

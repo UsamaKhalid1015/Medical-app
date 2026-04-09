@@ -47,17 +47,20 @@ const StateCountry = () => {
           title={'State'}
           placeholder={'Select State'}
           data={states}
+          style={styles.stateDropdown}
         />
         <DropDownModal
           title={'Country'}
           data={countries}
           placeholder={'Select country'}
+          style={styles.stateDropdown}
         />
       </View>
       <Button
         onPress={handleNav}
         style={styles.bottomButton}
         title={'continue'}
+        textColor="white"
       />
     </View>
   );

@@ -1,5 +1,3 @@
-import React from 'react';
-// import { useNavigation } from '@react-navigation/native';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import AppText from '../../../components/appText/AppText';
 import { styles } from './Verify.styles';
@@ -34,8 +32,9 @@ const Verification = ({ navigation }) => {
         </View>
         <Button
           onPress={handleNav}
-          style={{ marginRight: 10 }}
           title={'Continue'}
+          textColor="white"
+          style={styles.btnContinue}
         />
       </View>
       <View style={styles.line2}>

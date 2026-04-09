@@ -11,6 +11,7 @@ const PatientSummary = ({
   buttonText,
   onButtonPress,
   onPressButton,
+  showButton,
 }) => {
   return (
     <View style={styles.container}>
@@ -40,10 +41,13 @@ const PatientSummary = ({
         <Text style={styles.vital}>R {vitals.R}</Text>
         <Text style={styles.vital}>BP{vitals.BP}</Text>
       </View>
+
       <Button
+        showButton={showButton}
         title={buttonText}
         onPress={onPressButton}
         style={styles.beginButton}
+        textColor="white"
       />
     </View>
   );

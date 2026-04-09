@@ -1,8 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    paddingHorizontal: 20,
+    marginTop: '20%',
+  },
   imagestyle: {
-    width: 32,
+    width: '10%',
     height: 32,
     objectFit: 'contain',
   },
@@ -12,40 +17,38 @@ export const styles = StyleSheet.create({
     fontWeight: '500',
   },
   topView: {
-    marginLeft: 20,
-    marginTop: 100,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 7,
-    paddingBottom: 18,
   },
   recoveryStyle: {
-    paddingHorizontal: 25,
-    justifyContent: 'center',
-    // alignItems: 'center',
-    paddingTop: 20,
-    alignSelf: 'flex-start',
+    width: '100%',
+    marginTop: 30,
   },
   recoveryStyle1: {
     fontSize: 18,
   },
   enterEmail: {
     fontSize: 13,
-    paddingTop: 10,
+    paddingTop: '5%',
   },
   email: {
-    paddingTop: 20,
+    paddingTop: '10%',
     fontSize: 15,
-    paddingBottom: 5,
+    paddingBottom: '1%',
   },
   inputEmail: {
     height: 40,
+    borderColor: 'gray',
     borderWidth: 1,
-    borderColor: '#00073527',
-    borderRadius: 5,
+    width: '100%',
+    marginBottom: 30,
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    marginTop: 10,
   },
   line1: {
-    marginTop: 30,
+    marginTop: '12%',
     gap: 10,
     flexDirection: 'row',
     justifyContent: 'center',
@@ -53,13 +56,17 @@ export const styles = StyleSheet.create({
   },
   belowLine: {
     borderWidth: 1,
-    borderRightWidth: 150,
-    border: 1,
+    width: '43%',
     borderColor: '#000B3618',
   },
   backText: {
-    paddingTop: 60,
+    paddingTop: '20%',
     textAlign: 'center',
     fontSize: 16,
+  },
+  recoveryButton: {
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

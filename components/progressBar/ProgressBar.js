@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = ({ progress, width = '100%' }) => {
   return (
     <View
       style={{

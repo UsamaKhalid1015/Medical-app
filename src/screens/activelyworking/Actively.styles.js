@@ -2,11 +2,11 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   mainViewarrow: {
     flex: 1,
-    paddingHorizontal: 10,
-    marginTop: 100,
+    paddingHorizontal: 20,
+    marginTop: '20%',
   },
   arrow: {
-    width: 18,
+    width: '5%',
     height: 16,
     marginBottom: 20,
   },
@@ -17,10 +17,13 @@ export const styles = StyleSheet.create({
   emtText1: {
     fontSize: 20,
   },
+  progressBar: {
+    width: '10%',
+  },
   notActively: {
     border: 1,
     borderColor: '#000B3618',
-    width: 361,
+    width: '100%',
     height: 56,
     marginTop: 40,
     borderRadius: 14,
@@ -33,20 +36,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     paddingTop: 14,
   },
-  notActively1: {
-    borderWidth: 1,
-    borderColor: '#000B3618',
-    width: 361,
-    height: 56,
-    marginTop: 14,
-    borderRadius: 14,
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: 1,
-  },
   amText: {
-    alignSelf: 'flex-start',
-    marginLeft: 10,
     fontSize: 18,
   },
   bottomButton: {
@@ -54,5 +44,8 @@ export const styles = StyleSheet.create({
     bottom: 20,
     left: 20,
     right: 20,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

@@ -1,12 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  mainViewarrow: {
-    paddingHorizontal: 10,
-    marginTop: 100,
+  container: {
+    flex: 1,
+    paddingHorizontal: 20,
+    marginTop: '20%',
   },
   arrow: {
-    width: 18,
+    width: '5%',
     height: 16,
     marginBottom: 20,
   },
@@ -20,13 +21,13 @@ export const styles = StyleSheet.create({
   stylecountry: {
     paddingVertical: 20,
   },
-  container: {
-    flex: 1,
-  },
   bottomButton: {
     position: 'absolute',
     bottom: 20,
     left: 20,
     right: 20,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

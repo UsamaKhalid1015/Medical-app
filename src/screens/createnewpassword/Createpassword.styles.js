@@ -1,13 +1,14 @@
 import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   imageView: {
-    width: 32,
+    width: '10%',
     height: 32,
     objectFit: 'contain',
   },
   mainView1: {
-    marginTop: 100,
+    marginTop: '20%',
     paddingHorizontal: 20,
+    flex: 1,
   },
   imagetextView: {
     flexDirection: 'row',
@@ -28,6 +29,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
     borderColor: '#00073527',
+    width: '100%',
   },
   repeateText: {
     marginTop: 10,
@@ -39,6 +41,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
     borderColor: '#00073527',
+    width: '100%',
   },
   line3: {
     marginTop: 30,
@@ -49,13 +52,17 @@ export const styles = StyleSheet.create({
   },
   belowLine2: {
     borderWidth: 1,
-    borderRightWidth: 150,
-    border: 1,
+    width: '43%',
     borderColor: '#000B3618',
   },
   backText1: {
     paddingTop: 60,
     textAlign: 'center',
     fontSize: 16,
+  },
+  btnUpdate: {
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

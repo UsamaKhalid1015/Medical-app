@@ -1,4 +1,4 @@
-import { Image, View } from 'react-native';
+import { Image, View, Text } from 'react-native';
 import { styles } from './Collagen.styles';
 import React from 'react';
 

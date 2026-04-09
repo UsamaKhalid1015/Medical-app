@@ -84,6 +84,7 @@ const RolePractice = ({ navigation }) => {
           style={styles.buttonBottom}
           onPress={handleNav}
           title={'Continue'}
+          textColor="white"
         />
       ) : null}
     </View>

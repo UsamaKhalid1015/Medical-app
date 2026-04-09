@@ -23,7 +23,12 @@ const CreatePassword = ({ navigation }) => {
         <TextInput style={styles.inputPassword} secureTextEntry={true} />
         <Text style={styles.repeateText}>Repeate password</Text>
         <TextInput style={styles.inputRepeate} secureTextEntry={true} />
-        <Button onPress={handleNav} title={'Update password'} />
+        <Button
+          onPress={handleNav}
+          title={'Update password'}
+          textColor="white"
+          style={styles.btnUpdate}
+        />
       </View>
       <View style={styles.line3}>
         <View style={styles.belowLine2}></View>

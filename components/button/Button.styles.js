@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
   },
   btnText: {
-    color: 'white',
+    textColor: 'white',
     fontSize: 14,
     width: 290,
     height: 23,

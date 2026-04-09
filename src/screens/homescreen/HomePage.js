@@ -12,7 +12,7 @@ import { styles } from './Home.styles';
 import Collage from '../../../components/imageCollage/Collage';
 import Textheading from '../../../components/textheading/Textheading';
 import CustomImage from '../../../components/image/Image';
-import { useNavigation } from '@react-navigation/native'; // <-- Added
+import { useNavigation } from '@react-navigation/native';
 
 const selectedItems = [
   {
@@ -74,18 +74,14 @@ const carouselImages = [
 
 const HomePage = () => {
   const navigation = useNavigation();
-
   const flatListRef = useRef(null);
 
-  // ------------------------
-  // RENDER SELECTED FOR YOU
-  // ------------------------
   const renderItem = ({ item }) => (
     <TouchableOpacity
       activeOpacity={0.7}
       onPress={() => {
         if (item.title === 'Cardiac') {
-          navigation.navigate('Cardiac'); // <-- Navigate to Cardiac screen
+          navigation.navigate('Cardiac');
         }
       }}
     >
@@ -100,12 +96,8 @@ const HomePage = () => {
     </TouchableOpacity>
   );
 
-  // ------------------------
-  // FLATLIST HEADER CONTENT
-  // ------------------------
   const ListHeader = () => (
     <View style={styles.mainScreen}>
-      {/* Top bar */}
       <View style={styles.mainView}>
         <View style={styles.mainView1}>
           <Image
@@ -120,7 +112,6 @@ const HomePage = () => {
         />
       </View>
 
-      {/* Weekly points */}
       <View style={styles.viewpoints}>
         <Text style={styles.textpoints}>Points earned this week</Text>
         <View style={styles.starview}>
@@ -139,7 +130,6 @@ const HomePage = () => {
 
       <AppText style={styles.stylecontinue}>Continue Practicing</AppText>
 
-      {/* Carousel FlatList */}
       <FlatList
         data={carouselImages}
         keyExtractor={(item, index) => index.toString()}
@@ -154,6 +144,7 @@ const HomePage = () => {
                 {item.buttonTopText}
               </Text>
             </TouchableOpacity>
+
             <Text style={styles.imageTitle}>{item.title}</Text>
 
             <TouchableOpacity style={styles.imageButton} activeOpacity={0.7}>
@@ -165,7 +156,6 @@ const HomePage = () => {
         showsHorizontalScrollIndicator={false}
       />
 
-      {/* Test section */}
       <View style={styles.belowflatlist}>
         <Collage />
         <View>
@@ -177,7 +167,6 @@ const HomePage = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Title before render items */}
       <AppText style={styles.selectedOption}>Selected for you</AppText>
     </View>
   );
@@ -190,6 +179,8 @@ const HomePage = () => {
       renderItem={renderItem}
       ListHeaderComponent={ListHeader}
       showsVerticalScrollIndicator={false}
+      style={{ backgroundColor: '#ffffff' }} // ✅ FULL SCREEN WHITE
+      contentContainerStyle={{ paddingBottom: 20 }}
     />
   );
 };

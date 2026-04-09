@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   tagContainer: {
     marginTop: 20,
     padding: 16,
-    alignSelf: 'flex-start',
     position: 'absolute',
     bottom: 140,
   },
@@ -35,7 +34,7 @@ export const styles = StyleSheet.create({
     marginLeft: 15,
   },
   arrowStyle: {
-    width: 15,
+    width: '4%',
     height: 15,
     marginTop: 60,
     marginLeft: 20,

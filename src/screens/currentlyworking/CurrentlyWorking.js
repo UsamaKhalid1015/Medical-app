@@ -85,6 +85,7 @@ const CurrentlyWorking = ({ navigation }) => {
           style={styles.bottomButton}
           onPress={handleNav}
           title={'Continue'}
+          textColor="white"
         />
       ) : null}
     </View>

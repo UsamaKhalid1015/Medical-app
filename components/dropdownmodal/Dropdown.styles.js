@@ -7,15 +7,14 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     border: 1,
     borderColor: '#000B3618',
-    width: 361,
+    width: '100%',
     height: 50,
     borderRadius: 10,
     borderWidth: 1,
-    paddingVertical: 12,
     paddingHorizontal: 8,
   },
   stylecountry: {
-    paddingVertical: 20,
+    paddingVertical: 10,
   },
   viewModel: {
     backgroundColor: 'white',
